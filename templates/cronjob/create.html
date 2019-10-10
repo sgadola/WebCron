@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>CronJob erstellen</title>
+    </head>
+    <body>
+        <h1>Cron-Job erstellen</h1>
+
+        <p>Füllen sie das Formular aus, um einen cron-Job zu anzulegen. es werden HTTP- als auch HTTPS-URLunterstüzt.
+            Falls die URL mit HTTP-Authentifizierung gesichert ist (z.B. ".htaccess"-Passwortschutz), hinterlegen sie bitte auch die entsprechenden Zugangsdaten,
+            damit wir die Webseite korrekt abrufen können.
+        </p>
+
+        <p><span class="hint">Hinweis:</span> Weitere erweiterte Einstellungen für ihren Cron-Job können sie nach dem Anlegen vornehmen,
+            indem Sie den Job bearbeiten.
+        </p>
+
+
+        <form>
+            <div class="container" name="Title">
+                <input id="InputTitle" type="text" placeholder="Titel"/>
+                <input in="InputURL" type="text" placeholder="https://">
+            </div>
+
+            <div class="container" name="Auth">
+
+            </div>
+
+            <div class="container" name="Execution">
+
+            </div>
+
+            <div class="container" name="Notify">
+
+            </div>
+
+            <div class="container" name="Common">
+
+            </div>
+        </form>
+    </body>
+</html>

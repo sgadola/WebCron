@@ -1,0 +1,21 @@
+/
+	/auth
+	/auth/register
+	/auth/login
+	/auth/logout	evtl
+	
+	/create
+	/create/save	evtl
+	/create/load
+	
+	
+	
+	
+/
+	/register
+	/login
+	/logout		evtl
+
+	/create
+	/save		evtl
+	/load       evtl
