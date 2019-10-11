@@ -5,8 +5,9 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
 
-        {{ register_form.as_p }}
+        {{ form.as_ul }}
 
-        <button type="submit" class="save btn btn-default">Login</button>
+        <br>
+        <button type="submit" class="save btn btn-default">Registrieren</button>
     </form>
 {% endblock %}

@@ -31,8 +31,11 @@ _urlpatterns = [
 
 urlpatterns = [
     # path('', views.index),
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
 
     # CronJob app urls
     path('', include('CronJob.urls')),
+
+    # Test path for testing / experimenting
+    path('test/', views.test, name='test'),
 ]

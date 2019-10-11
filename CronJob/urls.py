@@ -1,13 +1,11 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
-app_name = "CronJob"
+# app_name = "CronJob"
 urlpatterns = [
     path('', views.index, name='index'),
-    path('', views.index, name='index'),
-    path('', views.index, name='index'),
+    path('accounts/', include('django.contrib.auth.urls')),
 
-
-    path('login', views.login, name='login'),
-    path('register', views.register, name='register'),
+    path('create/', views.cron_fill, name='create'),
+    path('register/', views.register_user, name='register'),
 ]
