@@ -1,0 +1,22 @@
+<!-- templates/cronjob/register.html
+     Used by Index View -->
+{% extends 'cronjob/base.html' %}
+
+{% block title %}WebCron | Home{% endblock %}
+
+{% block content %}
+    <h3><p>Willkommen zu WebCron.</p></h3><br>
+    <p style="width: 80%">Dieses Tool ermöglicht Ihnen Cronjobs online zu erstellen und bei Bedarf auszuführen.<br>
+        Wenn Sie nicht wissen was Cronjobs sind, im entsprechenden
+        <a href="https://de.wikipedia.org/wiki/Cron" target="_blank"> Artikel auf Wikipedia.org</a> zum Unix-Programm
+        <em>Cron</em> finden Sie einige nützliche Informationen dazu.
+    </p>
+
+    {% if not user.is_authenticated %}
+        <p>Leider sind sie im Moment nicht eingeloggt.<br>
+            Bitte loggen Sie sich <a href="{% url 'login' %}">hier</a> ein, oder wenn Sie noch kein Login haben
+            können Sie sich <a href="{% url 'register' %}">hier registrieren</a>.</p>
+    {% else %}
+        Bitte <a href="{% url 'create' %}">hier</a> klicken um einen neuen CronJob zu erfassen.
+    {% endif %}
+{% endblock %}
