@@ -17,6 +17,8 @@ def index(request):
 
     }
 
+    return render(request, 'cronjob/index.html')
+
     if request.user.is_authenticated:
         # UserManager.create_user()
         # request.POST[0]
@@ -52,12 +54,12 @@ def logout_user(request):
 
 # Register view
 def register_user(request):
-    return render(request, 'registration/register.html', {})
+    return render(request, 'registration/register.html')
 
 
-# Cron fill view
-def cron_fill(request):
-    return ""
+# Cronjob create view
+def create(request):
+    return render(request, 'cronjob/create.html')
 
 
 # test view for testing / experimentig

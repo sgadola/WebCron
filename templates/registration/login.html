@@ -1,0 +1,22 @@
+<!-- templates/registration/login.html
+     Used by Djangos Login View -->
+{% extends 'cronjob/base.html' %}
+
+{% block title %}WebCron | Login{% endblock %}
+
+{% block content %}
+    <h2>Login</h2>
+
+    <p>Sie sind nicht angemeldet, bitte melden sie sich an.<br>
+        Alternativ können sie sich auch erneut registrieren.</p>
+
+    <br>
+
+    <form method="post" class="post-form">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit" class="save btn btn-default">Login</button>
+    </form>
+{% endblock %}
